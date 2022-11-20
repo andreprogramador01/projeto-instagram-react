@@ -6,7 +6,12 @@ export default function Post(props){
   const [quantidadeLikes, setquantidadeLikes] = useState(123)
 
   function mudarBookmark(){
-    setBookmark('bookmark');
+    if(bookmark === "bookmark-outline"){
+      setBookmark('bookmark');
+    }else{
+      setBookmark('bookmark-outline');
+    }
+    
   }
   function curtir(){
     if(like === "heart-outline"){

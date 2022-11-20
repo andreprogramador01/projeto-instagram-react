@@ -7,8 +7,13 @@ export default function Usuario(){
   const [imagem, setImagem] = useState("assets/img/catanacomics.svg")
     
   function mudaNome(){
-   let resposta = prompt('Qual o nome do usuário?') 
-   setNome(resposta) 
+   let resposta = prompt('Qual o nome do usuário?')
+   if(!resposta){
+    setNome(nome)
+   }else{
+    setNome(resposta) 
+   }
+   
       
     }
   function mudaImagem(){
